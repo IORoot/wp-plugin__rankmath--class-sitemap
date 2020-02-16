@@ -66,7 +66,7 @@ function tb_rm_add_to_sitemap(){
          */
         $image = tb_rm_event_images($slot['serviceID']);
         $tbk_date = (new DateTime($slot['start']))->format("Y-m-d");
-        $schema_line = '<url><loc>http://dev.londonparkour.com/classes/class/?tbk_date='.$tbk_date.'&amp;tbk_service='.$slot['serviceID'].'</loc><lastmod>'.$slot['start'].'</lastmod>'.$image.'</url>';
+        $schema_line = '<url><loc>'.WP_SITEURL.'/classes/class/?tbk_date='.$tbk_date.'&amp;tbk_service='.$slot['serviceID'].'</loc><lastmod>'.$slot['start'].'</lastmod>'.$image.'</url>';
         $urls .= $schema_line;
     }
 
