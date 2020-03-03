@@ -45,7 +45,7 @@ function tb_rm_add_to_sitemap(){
      */
     $service_ids = array('parkour-class', 'beginner-outdoor', 'youth-class-8-12', 'parkour-free-class', 'commandotemple-indoor');
     $coworker_id = array();
-    $max_get_time = (new DateTime("+1 month"))->format(DATE_ATOM);
+    $max_get_time = (new DateTime("+3 months"))->format(DATE_ATOM);
     $slots = $calendar->getSlots($service_ids, $coworker_id, NULL, $max_get_time)->getAllSlots();
 
     /**
